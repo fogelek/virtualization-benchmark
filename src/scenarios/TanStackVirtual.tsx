@@ -38,7 +38,7 @@ export const TanStackVirtual = React.memo(() => {
       >
         {rowVirtualizer.getVirtualItems().map((virtualItem) => (
           <Row
-            key={virtualItem.key}
+            key={virtualItem.index}
             index={virtualItem.index}
             style={{
               position: "absolute",
