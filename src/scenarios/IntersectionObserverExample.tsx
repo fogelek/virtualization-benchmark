@@ -10,6 +10,7 @@ import { makeStyles, shorthands } from "@fluentui/react-components";
 import { Row } from "../components/Row";
 import { useArray } from "../utils/useArray";
 import { ROW_HEIGHT } from "../utils/constants";
+import { useSetFirstRender } from "../utils/configuration";
 
 const useStyles = makeStyles({
   container: {
@@ -296,12 +297,13 @@ export const DeferredRenderWrapper: React.FC<{}> = (props) => {
 export const IntersectionObserverExample = React.memo(() => {
   const styles = useStyles();
   const array = useArray();
+  useSetFirstRender();
 
   return (
     <IntersectionObserverProvider
       rootMargin="1000px 0px"
       threshold={0}
-      initiallyVisibleElements={50}
+      initiallyVisibleElements={0}
     >
       <div
         aria-label="IntersectionObserver Example"
@@ -311,7 +313,7 @@ export const IntersectionObserverExample = React.memo(() => {
         {array.map((_, index) => (
           <DeferredRenderWrapper key={index}>
             <Row index={index} style={{ height: ROW_HEIGHT }} />
-          </DeferredRenderWrapper>
+         </DeferredRenderWrapper>
         ))}
       </div>
     </IntersectionObserverProvider>

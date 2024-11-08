@@ -62,7 +62,8 @@ export function useSetRowRenders() {
 
 export function useSetFirstRender() {
   const start = React.useRef(NaN);
-  React.useEffect(() => {
+
+  React.useLayoutEffect(() => {
     window.__firstRender = window.performance.now() - start.current;
   }, []);
 

@@ -5,18 +5,6 @@
     "path": "native"
   },
   {
-    "src": "/src/scenarios/ContentVisibility.tsx",
-    "name": "content-visibility",
-    "path": "content-visibility",
-    "external": "https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility"
-  },
-  {
-    "src": "/src/scenarios/ReactVirtual.tsx",
-    "name": "react-virtual",
-    "path": "react-virtual",
-    "external": "https://github.com/tannerlinsley/react-virtual"
-  },
-  {
     "src": "/src/scenarios/ReactWindow.tsx",
     "name": "react-window",
     "path": "react-window",
